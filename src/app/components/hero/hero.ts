@@ -13,7 +13,7 @@ import { IconComponent } from '../icon/icon';
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <!-- Copy -->
-          <div class="lg:col-span-6 fade-up">
+          <div class="lg:col-span-6 fade-up min-w-0 w-full">
             <div class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-[11px] sm:text-xs font-semibold text-brand-700 max-w-full">
               <span class="relative flex h-2 w-2 shrink-0">
                 <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75"></span>
@@ -22,9 +22,12 @@ import { IconComponent } from '../icon/icon';
               <span class="truncate">Live now &mdash; multi-tenant SaaS for clinics</span>
             </div>
 
-            <h1 class="mt-5 font-display text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] sm:leading-[1.08] lg:leading-[1.05] text-balance">
+            <h1
+              class="mt-5 font-display font-extrabold text-slate-900 leading-[1.15] text-balance max-w-full"
+              style="font-size: clamp(1.5rem, 4.5vw + 0.5rem, 3.75rem); line-height: 1.1;"
+            >
               The complete operating system for
-              <span class="text-gradient whitespace-nowrap">modern clinics</span>.
+              <span class="text-gradient">modern clinics</span>.
             </h1>
 
             <p class="mt-5 text-base sm:text-lg leading-relaxed text-slate-600 max-w-xl">
@@ -62,7 +65,7 @@ import { IconComponent } from '../icon/icon';
           </div>
 
           <!-- Visual: mocked dashboard -->
-          <div class="lg:col-span-6 fade-up [animation-delay:120ms]">
+          <div class="lg:col-span-6 fade-up [animation-delay:120ms] min-w-0 w-full">
             <div class="relative">
               <!-- Glow -->
               <div class="absolute -inset-6 bg-gradient-to-br from-brand-400/30 via-sky-400/20 to-indigo-500/20 blur-3xl rounded-[3rem]" aria-hidden="true"></div>
