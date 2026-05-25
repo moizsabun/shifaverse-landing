@@ -94,12 +94,16 @@ body {
   html { scroll-behavior: auto; }
 }
 
-/* Pretty gradient text */
+/* Pretty gradient text — -webkit-text-fill-color is required on iOS
+   Safari, otherwise the system color overrides `color: transparent`
+   and the gradient never shows through the glyphs. */
 .text-gradient {
   background: linear-gradient(135deg, #10b981 0%, #0ea5e9 50%, #6366f1 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
+  display: inline-block;
 }
 
 /* Hide scrollbar but keep scrollability — used by horizontal chip strips */
@@ -143,10 +147,18 @@ img, svg, video, canvas {
   height: auto;
 }
 
-/* Long words / URLs shouldn't blow out narrow viewports */
-p, li, h1, h2, h3, h4, span, a, button {
+/* Long words / URLs shouldn't blow out narrow viewports.
+   Headings (h1-h4) use the gentler break-word so words only break
+   when they would otherwise overflow — never mid-glyph for visible
+   marketing copy. */
+p, li, span, a, button {
   overflow-wrap: anywhere;
   word-break: normal;
+}
+h1, h2, h3, h4 {
+  overflow-wrap: break-word;
+  word-break: normal;
+  text-wrap: pretty;
 }
 
 /* Tap targets — make interactive elements at least 44x44 on touch devices */

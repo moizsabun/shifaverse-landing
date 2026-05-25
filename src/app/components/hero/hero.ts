@@ -22,9 +22,9 @@ import { IconComponent } from '../icon/icon';
               <span class="truncate">Live now &mdash; multi-tenant SaaS for clinics</span>
             </div>
 
-            <h1 class="mt-5 font-display text-3xl leading-[1.15] sm:text-5xl sm:leading-[1.05] lg:text-6xl font-extrabold text-slate-900 break-words">
+            <h1 class="mt-5 font-display text-[1.6rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] sm:leading-[1.08] lg:leading-[1.05] text-balance">
               The complete operating system for
-              <span class="text-gradient">modern clinics</span>.
+              <span class="text-gradient whitespace-nowrap">modern clinics</span>.
             </h1>
 
             <p class="mt-5 text-base sm:text-lg leading-relaxed text-slate-600 max-w-xl">
