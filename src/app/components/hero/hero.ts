@@ -14,20 +14,20 @@ import { IconComponent } from '../icon/icon';
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <!-- Copy -->
           <div class="lg:col-span-6 fade-up">
-            <div class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-semibold text-brand-700">
-              <span class="relative flex h-2 w-2">
+            <div class="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1.5 text-[11px] sm:text-xs font-semibold text-brand-700 max-w-full">
+              <span class="relative flex h-2 w-2 shrink-0">
                 <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75"></span>
                 <span class="relative inline-flex h-2 w-2 rounded-full bg-brand-600"></span>
               </span>
-              Live now — multi-tenant SaaS for modern clinics
+              <span class="truncate">Live now &mdash; multi-tenant SaaS for clinics</span>
             </div>
 
-            <h1 class="mt-5 font-display text-[2rem] leading-[1.1] sm:text-5xl sm:leading-[1.05] lg:text-6xl font-extrabold text-slate-900">
+            <h1 class="mt-5 font-display text-3xl leading-[1.15] sm:text-5xl sm:leading-[1.05] lg:text-6xl font-extrabold text-slate-900 break-words">
               The complete operating system for
               <span class="text-gradient">modern clinics</span>.
             </h1>
 
-            <p class="mt-5 text-lg leading-relaxed text-slate-600 max-w-xl">
+            <p class="mt-5 text-base sm:text-lg leading-relaxed text-slate-600 max-w-xl">
               ShifaVerse replaces paper registers, scattered spreadsheets, and clunky software with one elegant platform &mdash;
               smart token queues, dynamic shift workflows, digital prescriptions, medical test ordering, automated billing,
               and a free <a href="#mobile" class="font-semibold text-violet-700 hover:text-violet-900 underline decoration-violet-300 underline-offset-4">native mobile app for patients</a> &mdash; all under one secure multi-tenant roof.
@@ -79,20 +79,20 @@ import { IconComponent } from '../icon/icon';
                 <div class="p-4 sm:p-5 grid gap-3 sm:gap-4">
                   <!-- Top KPI row -->
                   <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
-                    <div class="rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white p-3 sm:p-4">
-                      <div class="text-[10px] sm:text-[11px] uppercase tracking-wide opacity-80">Now serving</div>
+                    <div class="rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white p-3 sm:p-4 min-w-0">
+                      <div class="text-[10px] sm:text-[11px] uppercase tracking-wide opacity-80 truncate">Now serving</div>
                       <div class="mt-1 text-2xl sm:text-3xl font-extrabold leading-none">#07</div>
-                      <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] opacity-80">Avg wait • 4m 12s</div>
+                      <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] opacity-80 truncate">Wait • 4m 12s</div>
                     </div>
-                    <div class="rounded-xl bg-slate-50 ring-1 ring-slate-200 p-3 sm:p-4">
-                      <div class="text-[10px] sm:text-[11px] uppercase tracking-wide text-slate-500">In queue</div>
+                    <div class="rounded-xl bg-slate-50 ring-1 ring-slate-200 p-3 sm:p-4 min-w-0">
+                      <div class="text-[10px] sm:text-[11px] uppercase tracking-wide text-slate-500 truncate">In queue</div>
                       <div class="mt-1 text-2xl sm:text-3xl font-extrabold leading-none text-slate-900">14</div>
-                      <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-slate-500">Next: Aisha K.</div>
+                      <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-slate-500 truncate">Next: Aisha K.</div>
                     </div>
-                    <div class="col-span-2 sm:col-span-1 rounded-xl bg-slate-50 ring-1 ring-slate-200 p-3 sm:p-4">
-                      <div class="text-[10px] sm:text-[11px] uppercase tracking-wide text-slate-500">Today's revenue</div>
+                    <div class="col-span-2 sm:col-span-1 rounded-xl bg-slate-50 ring-1 ring-slate-200 p-3 sm:p-4 min-w-0">
+                      <div class="text-[10px] sm:text-[11px] uppercase tracking-wide text-slate-500 truncate">Today's revenue</div>
                       <div class="mt-1 text-2xl sm:text-3xl font-extrabold leading-none text-slate-900">$1,284</div>
-                      <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-emerald-600 font-semibold">+18% vs avg</div>
+                      <div class="mt-1.5 sm:mt-2 text-[10px] sm:text-[11px] text-emerald-600 font-semibold truncate">+18% vs avg</div>
                     </div>
                   </div>
 
@@ -117,23 +117,17 @@ import { IconComponent } from '../icon/icon';
 
                   <!-- Mini list -->
                   <div class="rounded-xl ring-1 ring-slate-200">
-                    <div class="flex items-center justify-between px-4 py-3 border-b border-slate-100">
-                      <div class="text-sm font-semibold text-slate-900">Recent prescriptions</div>
-                      <span class="text-[11px] font-medium text-brand-700 bg-brand-50 px-2 py-0.5 rounded-full">Auto-printed</span>
+                    <div class="flex items-center justify-between gap-2 px-3 sm:px-4 py-2.5 sm:py-3 border-b border-slate-100">
+                      <div class="text-xs sm:text-sm font-semibold text-slate-900 truncate min-w-0">Recent prescriptions</div>
+                      <span class="text-[10px] sm:text-[11px] font-medium text-brand-700 bg-brand-50 px-2 py-0.5 rounded-full shrink-0">Auto-printed</span>
                     </div>
                     <ul class="divide-y divide-slate-100 text-sm">
-                      <li class="px-4 py-2.5 flex items-center justify-between">
-                        <span class="text-slate-700">Ayesha Malik · Token #05</span>
-                        <span class="text-xs text-slate-500">Amoxicillin · 500mg</span>
-                      </li>
-                      <li class="px-4 py-2.5 flex items-center justify-between">
-                        <span class="text-slate-700">Bilal Ahmed · Token #06</span>
-                        <span class="text-xs text-slate-500">CBC + Urine Test</span>
-                      </li>
-                      <li class="px-4 py-2.5 flex items-center justify-between">
-                        <span class="text-slate-700">Sana Iqbal · Token #04</span>
-                        <span class="text-xs text-slate-500">Paracetamol · 650mg</span>
-                      </li>
+                      @for (rx of recentRx; track rx.name) {
+                        <li class="px-3 sm:px-4 py-2 sm:py-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+                          <span class="text-xs sm:text-sm text-slate-700 truncate">{{ rx.name }}</span>
+                          <span class="text-[11px] sm:text-xs text-slate-500 truncate">{{ rx.detail }}</span>
+                        </li>
+                      }
                     </ul>
                   </div>
                 </div>
@@ -164,4 +158,10 @@ import { IconComponent } from '../icon/icon';
 })
 export class HeroComponent {
   protected tokens = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+  protected recentRx = [
+    { name: 'Ayesha Malik · #05', detail: 'Amoxicillin · 500mg' },
+    { name: 'Bilal Ahmed · #06', detail: 'CBC + Urine Test' },
+    { name: 'Sana Iqbal · #04', detail: 'Paracetamol · 650mg' },
+  ];
 }
