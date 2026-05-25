@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:gh": "ng build --base-href /shifaverse-landing/",
+    "predeploy": "npm run build:gh && node -e \"require('fs').copyFileSync('dist/shifaverse-website/browser/index.html','dist/shifaverse-website/browser/404.html')\"",
+    "deploy": "ngh --dir=dist/shifaverse-website/browser --no-silent --dotfiles"
   },
   "prettier": {
     "printWidth": 100,
@@ -37,6 +40,7 @@
     "@angular/cli": "^21.1.2",
     "@angular/compiler-cli": "^21.1.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "angular-cli-ghpages": "^3.0.3",
     "jsdom": "^27.1.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.12",

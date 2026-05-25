@@ -1,3 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+
+  --color-ink-50: #f8fafc;
+  --color-ink-900: #0b1220;
+  --color-ink-950: #060b16;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Subtle gradient utilities used across the page */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero-radial {
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(16, 185, 129, 0.18), transparent 60%),
+              radial-gradient(800px 500px at 90% 10%, rgba(14, 165, 233, 0.14), transparent 60%),
+              radial-gradient(700px 400px at 10% 30%, rgba(168, 85, 247, 0.10), transparent 60%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+}
+
+.shadow-soft {
+  box-shadow:
+    0 1px 2px rgba(2, 6, 23, 0.04),
+    0 8px 24px -8px rgba(2, 6, 23, 0.10),
+    0 24px 64px -24px rgba(2, 6, 23, 0.12);
+}
+
+/* Animated marquee for trust strip */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+/* Fade-up on scroll (CSS-only with prefers-reduced-motion guard) */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .fade-up { animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* Pretty gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #0ea5e9 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
