@@ -9,7 +9,7 @@
     "test": "ng test",
     "build:gh": "ng build --base-href /shifaverse-landing/",
     "predeploy": "npm run build:gh && node -e \"require('fs').copyFileSync('dist/shifaverse-website/browser/index.html','dist/shifaverse-website/browser/404.html')\"",
-    "deploy": "ngh --dir=dist/shifaverse-website/browser --no-silent --dotfiles"
+    "deploy": "ngh --dir=dist/shifaverse-website/browser --no-silent"
   },
   "prettier": {
     "printWidth": 100,
