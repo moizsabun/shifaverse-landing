@@ -69,11 +69,11 @@ import { IconComponent } from '../icon/icon';
 
               <!-- Browser frame -->
               <div class="relative rounded-2xl bg-white ring-1 ring-slate-200 shadow-soft overflow-hidden">
-                <div class="flex items-center gap-1.5 px-4 py-3 border-b border-slate-100 bg-slate-50">
-                  <span class="h-2.5 w-2.5 rounded-full bg-rose-400"></span>
-                  <span class="h-2.5 w-2.5 rounded-full bg-amber-400"></span>
-                  <span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
-                  <span class="ml-3 text-[11px] text-slate-500 font-mono truncate">app.shifaverse.health / dashboard</span>
+                <div class="flex items-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3 border-b border-slate-100 bg-slate-50">
+                  <span class="h-2.5 w-2.5 rounded-full bg-rose-400 shrink-0"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-amber-400 shrink-0"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 shrink-0"></span>
+                  <span class="ml-2 sm:ml-3 text-[10px] sm:text-[11px] text-slate-500 font-mono truncate min-w-0 flex-1">app.shifaverse.health</span>
                 </div>
 
                 <div class="p-4 sm:p-5 grid gap-3 sm:gap-4">
