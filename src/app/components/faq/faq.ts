@@ -12,11 +12,11 @@ interface Item {
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section id="faq" class="py-24 lg:py-32 bg-slate-50">
+    <section id="faq" class="py-20 sm:py-24 lg:py-32 bg-slate-50">
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto">
           <span class="inline-block text-xs font-bold tracking-[0.18em] uppercase text-brand-700">Frequently asked questions</span>
-          <h2 class="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+          <h2 class="mt-3 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
             Everything you need to know
           </h2>
           <p class="mt-5 text-lg text-slate-600">
@@ -29,11 +29,11 @@ interface Item {
             <li class="rounded-2xl bg-white ring-1 ring-slate-200 shadow-soft overflow-hidden">
               <button
                 type="button"
-                class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                class="w-full flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-4 sm:py-5 text-left"
                 [attr.aria-expanded]="open() === i"
                 (click)="toggle(i)"
               >
-                <span class="font-display font-bold text-slate-900 text-base lg:text-lg">{{ item.q }}</span>
+                <span class="font-display font-bold text-slate-900 text-sm sm:text-base lg:text-lg">{{ item.q }}</span>
                 <span
                   class="shrink-0 grid h-8 w-8 place-items-center rounded-full bg-slate-100 text-slate-700 transition-transform duration-300"
                   [class.rotate-180]="open() === i"
@@ -42,7 +42,7 @@ interface Item {
                 </span>
               </button>
               @if (open() === i) {
-                <div class="px-6 pb-6 -mt-1 text-slate-600 leading-relaxed text-sm lg:text-base fade-up">
+                <div class="px-4 sm:px-6 pb-5 sm:pb-6 -mt-1 text-slate-600 leading-relaxed text-sm lg:text-base fade-up">
                   {{ item.a }}
                 </div>
               }

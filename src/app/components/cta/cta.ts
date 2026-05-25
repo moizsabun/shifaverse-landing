@@ -7,9 +7,9 @@ import { IconComponent } from '../icon/icon';
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section class="py-20 lg:py-28 bg-white">
+    <section class="py-16 sm:py-20 lg:py-28 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="relative overflow-hidden rounded-3xl bg-slate-950 text-white p-10 lg:p-16 shadow-soft">
+        <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl bg-slate-950 text-white p-7 sm:p-10 lg:p-16 shadow-soft">
           <!-- Decorative gradients -->
           <div class="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-brand-500/25 blur-3xl" aria-hidden="true"></div>
           <div class="absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl" aria-hidden="true"></div>
@@ -20,7 +20,7 @@ import { IconComponent } from '../icon/icon';
               <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/90 ring-1 ring-white/20">
                 <app-icon name="bolt" [size]="14" /> Ready in 5 minutes
               </span>
-              <h2 class="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+              <h2 class="mt-4 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold">
                 Bring your clinic into the 21st century.
               </h2>
               <p class="mt-4 text-lg text-white/80 max-w-xl">

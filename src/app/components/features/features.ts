@@ -14,11 +14,11 @@ interface Feature {
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section id="features" class="py-24 lg:py-32 bg-white">
+    <section id="features" class="py-20 sm:py-24 lg:py-32 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="inline-block text-xs font-bold tracking-[0.18em] uppercase text-brand-700">Platform features</span>
-          <h2 class="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+          <h2 class="mt-3 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
             Everything your clinic runs on,
             <span class="text-gradient">finally in one place.</span>
           </h2>
@@ -28,7 +28,7 @@ interface Feature {
           </p>
         </div>
 
-        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="mt-10 sm:mt-14 grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           @for (f of features; track f.title) {
             <article class="group flex flex-col rounded-2xl bg-white p-7 ring-1 ring-slate-200 hover:ring-brand-300 hover:-translate-y-1 transition-all duration-300 shadow-soft">
               <div

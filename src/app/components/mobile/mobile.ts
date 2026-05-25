@@ -14,7 +14,7 @@ interface MobileFeature {
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section id="mobile" class="relative py-24 lg:py-32 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <section id="mobile" class="relative py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <div class="absolute inset-0 bg-grid-dark opacity-50 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" aria-hidden="true"></div>
       <div class="absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-violet-500/25 blur-3xl" aria-hidden="true"></div>
       <div class="absolute -bottom-32 right-1/4 h-96 w-96 rounded-full bg-fuchsia-500/25 blur-3xl" aria-hidden="true"></div>
@@ -27,7 +27,7 @@ interface MobileFeature {
               <app-icon name="phone" [size]="14" />
               New &middot; Patient Mobile App
             </span>
-            <h2 class="mt-4 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">
+            <h2 class="mt-4 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold">
               A clinic in every
               <span class="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-rose-300 bg-clip-text text-transparent">patient's pocket.</span>
             </h2>
@@ -96,8 +96,8 @@ interface MobileFeature {
               <div class="absolute inset-0 -m-10 bg-gradient-to-br from-violet-500/30 via-fuchsia-500/20 to-rose-500/20 blur-3xl rounded-[3rem]" aria-hidden="true"></div>
 
               <!-- Back phone -->
-              <div class="relative hidden sm:block absolute -left-8 top-12 rotate-[-8deg] origin-bottom">
-                <div class="w-[220px] rounded-[2.5rem] bg-slate-800 ring-1 ring-white/10 p-2 shadow-soft">
+              <div class="hidden md:block absolute left-0 lg:-left-8 top-12 rotate-[-8deg] origin-bottom z-0">
+                <div class="w-[200px] lg:w-[220px] rounded-[2.5rem] bg-slate-800 ring-1 ring-white/10 p-2 shadow-soft">
                   <div class="rounded-[2rem] bg-gradient-to-br from-sky-600 to-indigo-700 p-4">
                     <div class="flex items-center justify-between text-[10px] opacity-80"><span>9:41</span><span>•••</span></div>
                     <div class="mt-3">
@@ -123,7 +123,7 @@ interface MobileFeature {
               </div>
 
               <!-- Front phone -->
-              <div class="relative mx-auto w-[260px] sm:w-[280px] rounded-[2.75rem] bg-slate-900 ring-1 ring-white/10 p-2 shadow-soft sm:translate-x-6">
+              <div class="relative mx-auto w-[240px] sm:w-[260px] lg:w-[280px] rounded-[2.75rem] bg-slate-900 ring-1 ring-white/10 p-2 shadow-soft md:translate-x-6 z-10">
                 <div class="absolute left-1/2 -translate-x-1/2 top-2 h-5 w-24 bg-slate-900 rounded-b-2xl z-10"></div>
                 <div class="rounded-[2.25rem] bg-gradient-to-br from-violet-600 via-fuchsia-600 to-rose-500 p-5 text-white relative overflow-hidden">
                   <div class="absolute inset-0 bg-grid-dark opacity-30" aria-hidden="true"></div>

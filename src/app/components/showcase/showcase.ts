@@ -15,11 +15,11 @@ interface DemoAccount {
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section id="showcase" class="py-24 lg:py-32 bg-gradient-to-b from-slate-50 via-white to-slate-50">
+    <section id="showcase" class="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-slate-50 via-white to-slate-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="inline-block text-xs font-bold tracking-[0.18em] uppercase text-brand-700">Try it live</span>
-          <h2 class="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+          <h2 class="mt-3 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
             Sign in with a demo account &mdash;
             <span class="text-gradient">no setup, no signup.</span>
           </h2>
@@ -84,19 +84,19 @@ interface DemoAccount {
           <!-- Public queue mock -->
           <div class="lg:col-span-5">
             <div class="rounded-2xl bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-rose-500 text-white p-1 shadow-soft ring-1 ring-slate-200">
-              <div class="rounded-[14px] bg-slate-950 p-6 lg:p-8 relative overflow-hidden">
+              <div class="rounded-[14px] bg-slate-950 p-5 sm:p-6 lg:p-8 relative overflow-hidden">
                 <div class="absolute inset-0 bg-grid-dark opacity-30" aria-hidden="true"></div>
                 <div class="relative">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <div class="text-[11px] uppercase tracking-[0.18em] text-white/60">Now serving</div>
-                      <div class="font-display text-7xl lg:text-8xl font-extrabold leading-none mt-1">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="min-w-0">
+                      <div class="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/60">Now serving</div>
+                      <div class="font-display text-5xl sm:text-6xl lg:text-8xl font-extrabold leading-none mt-1">
                         #07
                       </div>
                     </div>
-                    <div class="text-right">
-                      <div class="text-[11px] uppercase tracking-[0.18em] text-white/60">Estimated wait</div>
-                      <div class="font-display text-3xl font-bold mt-1">4m 12s</div>
+                    <div class="text-right shrink-0">
+                      <div class="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/60">Est. wait</div>
+                      <div class="font-display text-2xl sm:text-3xl font-bold mt-1">4m 12s</div>
                     </div>
                   </div>
 

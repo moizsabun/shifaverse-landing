@@ -101,3 +101,36 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+/* Hide scrollbar but keep scrollability — used by horizontal chip strips */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* iOS / Android notch and home-indicator awareness */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Prevent unwanted horizontal page scroll on tiny phones */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Long words / URLs shouldn't blow out narrow viewports */
+p, li, h1, h2, h3, h4, span {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Tap targets — make interactive elements at least 44x44 on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  a, button {
+    -webkit-tap-highlight-color: rgba(16, 185, 129, 0.15);
+  }
+}

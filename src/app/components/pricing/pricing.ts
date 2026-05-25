@@ -17,11 +17,11 @@ interface Plan {
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section id="pricing" class="py-24 lg:py-32 bg-white">
+    <section id="pricing" class="py-20 sm:py-24 lg:py-32 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="inline-block text-xs font-bold tracking-[0.18em] uppercase text-brand-700">Pricing</span>
-          <h2 class="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+          <h2 class="mt-3 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
             Simple, transparent, per-visit pricing.
           </h2>
           <p class="mt-5 text-lg text-slate-600">
@@ -29,10 +29,10 @@ interface Plan {
           </p>
         </div>
 
-        <div class="mt-14 grid gap-6 md:grid-cols-3 items-stretch">
+        <div class="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-3 items-stretch">
           @for (plan of plans; track plan.name) {
             <article
-              class="relative rounded-2xl p-7 lg:p-8 ring-1 transition-all shadow-soft flex flex-col"
+              class="relative rounded-2xl p-6 sm:p-7 lg:p-8 ring-1 transition-all shadow-soft flex flex-col"
               [class.bg-slate-900]="plan.highlight"
               [class.text-white]="plan.highlight"
               [class.ring-slate-900]="plan.highlight"
@@ -50,8 +50,8 @@ interface Plan {
               <h3 class="font-display text-lg font-bold" [class.text-white]="plan.highlight" [class.text-slate-900]="!plan.highlight">{{ plan.name }}</h3>
               <p class="mt-1 text-sm" [class.text-white/70]="plan.highlight" [class.text-slate-600]="!plan.highlight">{{ plan.blurb }}</p>
 
-              <div class="mt-6 flex items-baseline gap-1">
-                <span class="font-display text-5xl font-extrabold" [class.text-white]="plan.highlight" [class.text-slate-900]="!plan.highlight">{{ plan.price }}</span>
+              <div class="mt-5 sm:mt-6 flex items-baseline gap-1 flex-wrap">
+                <span class="font-display text-4xl sm:text-5xl font-extrabold leading-none" [class.text-white]="plan.highlight" [class.text-slate-900]="!plan.highlight">{{ plan.price }}</span>
                 <span class="text-sm" [class.text-white/70]="plan.highlight" [class.text-slate-500]="!plan.highlight">{{ plan.unit }}</span>
               </div>
 

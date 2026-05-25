@@ -17,11 +17,11 @@ interface Role {
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section id="roles" class="py-24 lg:py-32 bg-white">
+    <section id="roles" class="py-20 sm:py-24 lg:py-32 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="inline-block text-xs font-bold tracking-[0.18em] uppercase text-brand-700">For everyone involved</span>
-          <h2 class="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+          <h2 class="mt-3 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
             One platform, purpose-built portals for every persona.
           </h2>
           <p class="mt-5 text-lg text-slate-600">
@@ -31,23 +31,25 @@ interface Role {
         </div>
 
         <!-- Tabs -->
-        <div class="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Choose a role">
-          @for (r of roles; track r.key) {
-            <button
-              type="button"
-              role="tab"
-              [attr.aria-selected]="active() === r.key"
-              [class.bg-slate-900]="active() === r.key"
-              [class.text-white]="active() === r.key"
-              [class.bg-slate-100]="active() !== r.key"
-              [class.text-slate-700]="active() !== r.key"
-              class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-slate-200/70 data-[selected=true]:hover:bg-slate-800"
-              (click)="active.set(r.key)"
-            >
-              <app-icon [name]="r.icon" [size]="16" />
-              {{ r.label }}
-            </button>
-          }
+        <div class="mt-8 sm:mt-10 -mx-4 sm:mx-0 px-4 sm:px-0 overflow-x-auto scrollbar-hide" role="tablist" aria-label="Choose a role">
+          <div class="flex gap-2 min-w-max sm:min-w-0 sm:flex-wrap">
+            @for (r of roles; track r.key) {
+              <button
+                type="button"
+                role="tab"
+                [attr.aria-selected]="active() === r.key"
+                [class.bg-slate-900]="active() === r.key"
+                [class.text-white]="active() === r.key"
+                [class.bg-slate-100]="active() !== r.key"
+                [class.text-slate-700]="active() !== r.key"
+                class="shrink-0 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-slate-200/70"
+                (click)="active.set(r.key)"
+              >
+                <app-icon [name]="r.icon" [size]="16" />
+                {{ r.label }}
+              </button>
+            }
+          </div>
         </div>
 
         <!-- Content -->

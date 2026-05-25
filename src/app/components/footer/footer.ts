@@ -8,7 +8,7 @@ import { IconComponent } from '../icon/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <footer class="bg-slate-950 text-slate-300">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div class="grid gap-10 lg:grid-cols-12">
           <div class="lg:col-span-5">
             <a href="#top" class="inline-flex items-center gap-2.5">
@@ -22,16 +22,16 @@ import { IconComponent } from '../icon/icon';
               loved by owners, and carried in every patient's pocket.
             </p>
 
-            <form class="mt-6 flex max-w-md items-center gap-2" (submit)="$event.preventDefault()">
+            <form class="mt-6 flex flex-col sm:flex-row max-w-md items-stretch sm:items-center gap-2" (submit)="$event.preventDefault()">
               <label for="newsletter" class="sr-only">Email address</label>
               <input
                 id="newsletter"
                 type="email"
                 required
                 placeholder="you@clinic.com"
-                class="flex-1 rounded-full bg-white/5 ring-1 ring-white/10 placeholder:text-slate-500 text-white px-4 py-2.5 text-sm focus:outline-none focus:ring-brand-500"
+                class="w-full sm:flex-1 rounded-full bg-white/5 ring-1 ring-white/10 placeholder:text-slate-500 text-white px-4 py-2.5 text-sm focus:outline-none focus:ring-brand-500"
               />
-              <button class="rounded-full bg-brand-500 hover:bg-brand-400 px-4 py-2.5 text-sm font-semibold text-white transition-colors">
+              <button class="rounded-full bg-brand-500 hover:bg-brand-400 px-5 py-2.5 text-sm font-semibold text-white transition-colors whitespace-nowrap">
                 Subscribe
               </button>
             </form>

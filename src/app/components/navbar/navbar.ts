@@ -13,12 +13,12 @@ import { IconComponent } from '../icon/icon';
       [class.shadow-soft]="scrolled()"
       [class.bg-transparent]="!scrolled()"
     >
-      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16 lg:h-20" aria-label="Primary">
-        <a href="#top" class="flex items-center gap-2.5 group">
-          <span class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-soft ring-1 ring-brand-700/20">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-14 sm:h-16 lg:h-20" aria-label="Primary">
+        <a href="#top" class="flex items-center gap-2 sm:gap-2.5 group">
+          <span class="grid h-8 w-8 sm:h-9 sm:w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-soft ring-1 ring-brand-700/20">
             <app-icon name="logo" [size]="22" />
           </span>
-          <span class="font-display text-xl font-extrabold tracking-tight text-slate-900">Shifa<span class="text-brand-600">Verse</span></span>
+          <span class="font-display text-lg sm:text-xl font-extrabold tracking-tight text-slate-900">Shifa<span class="text-brand-600">Verse</span></span>
         </a>
 
         <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">

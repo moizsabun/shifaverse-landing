@@ -14,13 +14,13 @@ interface Step {
   imports: [IconComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section id="workflow" class="relative py-24 lg:py-32 bg-slate-50 overflow-hidden">
+    <section id="workflow" class="relative py-20 sm:py-24 lg:py-32 bg-slate-50 overflow-hidden">
       <div class="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" aria-hidden="true"></div>
 
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <span class="inline-block text-xs font-bold tracking-[0.18em] uppercase text-brand-700">How it works</span>
-          <h2 class="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+          <h2 class="mt-3 font-display text-[1.85rem] leading-tight sm:text-4xl lg:text-5xl font-extrabold text-slate-900">
             From patient walk-in to closed shift &mdash;
             <span class="text-gradient">in one continuous flow.</span>
           </h2>
